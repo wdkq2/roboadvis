@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Feature Results</title>
+</head>
+<body>
+  <h1>Search Results</h1>
+  <p>Query: {{ structured['query'] }}</p>
+  <ul>
+    {% for c in companies %}
+    <li>{{ c }} <button>Buy</button></li>
+    {% endfor %}
+  </ul>
+  <p><a href="{{ url_for('index') }}">Home</a></p>
+</body>
+</html>

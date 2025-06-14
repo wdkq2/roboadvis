@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Scenario Executed</title>
+</head>
+<body>
+  <h1>Scenario Executed</h1>
+  <p>Symbol: {{ scenario['symbol'] }}</p>
+  <p>Scenario: {{ scenario['scenario'] }}</p>
+  <p>Amount: {{ scenario['amount'] }}</p>
+  <h2>News</h2>
+  {% if news %}
+    <ul>
+    {% for n in news %}
+      <li>{{ n }}</li>
+    {% endfor %}
+    </ul>
+  {% else %}
+    <p>No news yet.</p>
+  {% endif %}
+  <p><a href="{{ url_for('index') }}">Home</a></p>
+</body>
+</html>
